@@ -1,4 +1,4 @@
-inspec_chef = attribute('inspec_chef', default: true, description: 'Run Checks for Chef Client')
+inspec_chef = attribute('inspec_chef', default: true, description: 'Run Checks for Chef Client').to_s.eql?('true') ? true : false
 chef_version = attribute('chef_version', default: '12.21.4', description: 'Chef Client Version')
 
 knife_path =
